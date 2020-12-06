@@ -1,3 +1,4 @@
+import org.gradle.kotlin.dsl.support.serviceOf
 import org.jetbrains.compose.compose
 
 plugins {
@@ -19,7 +20,7 @@ repositories {
 
 dependencies {
     implementation("kscience.kmath:kmath-ast:0.1.4")
-    implementation(compose.desktop.all)
+    implementation(compose.desktop.currentOs)
 }
 
 application.mainClassName = "io.github.commandertvis.calc.AppKt"
