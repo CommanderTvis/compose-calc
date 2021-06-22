@@ -11,15 +11,12 @@ group = "org.example"
 version = "1.0-SNAPSHOT"
 
 repositories {
-    maven(url = "https://dl.bintray.com/kotlin/kotlinx")
-    maven(url = "https://dl.bintray.com/hotkeytlt/maven")
-    maven(url = "https://dl.bintray.com/mipt-npm/scientifik/")
     maven(url = "https://maven.pkg.jetbrains.space/public/p/compose/dev")
     mavenCentral()
 }
 
 dependencies {
-    implementation("kscience.kmath:kmath-ast:0.1.4")
+    implementation("space.kscience:kmath-ast:0.2.1")
     implementation(compose.desktop.currentOs)
 }
 
