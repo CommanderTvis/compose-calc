@@ -1,23 +1,22 @@
-import org.gradle.kotlin.dsl.support.serviceOf
 import org.jetbrains.compose.compose
 
 plugins {
+    alias(libs.plugins.compose)
+    alias(libs.plugins.kotlin.jvm)
     application
-    id("org.jetbrains.compose")
-    kotlin(module = "jvm")
 }
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
 repositories {
-    maven(url = "https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     mavenCentral()
 }
 
 dependencies {
-    implementation("space.kscience:kmath-ast:0.2.1")
     implementation(compose.desktop.currentOs)
+    implementation(libs.kmath.ast)
 }
 
-application.mainClassName = "io.github.commandertvis.calc.AppKt"
+application.mainClass.set("io.github.commandertvis.calc.AppKt")

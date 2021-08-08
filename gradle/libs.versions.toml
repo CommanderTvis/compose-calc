@@ -1,0 +1,11 @@
+[versions]
+compose = "0.4.0"
+kmath = "0.2.1"
+kotlin = "1.5.10"
+
+[libraries]
+kmath-ast = { module = "space.kscience:kmath-ast", version.ref = "kmath" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+compose = { id = "org.jetbrains.compose", version.ref = "compose" }

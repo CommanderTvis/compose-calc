@@ -1,13 +1,8 @@
-pluginManagement {
-    repositories {
-        gradlePluginPortal()
-        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-    }
+enableFeaturePreview("VERSION_CATALOGS")
 
-    plugins {
-        id("org.jetbrains.compose") version "0.4.0"
-        kotlin("jvm") version "1.5.10"
-    }
+pluginManagement.repositories {
+    gradlePluginPortal()
+    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
 }
 
 rootProject.name = "compose-calc"
